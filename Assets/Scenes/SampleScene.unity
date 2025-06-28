@@ -1922,19 +1922,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1efbd403556004f9cc6a5b1e99fd49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points:
-  - id: 2
-    currentId: 5
-  - id: 5
-    currentId: 2
-  - id: 7
-    currentId: 1
-  - id: 8
-    currentId: 1
-  - id: 4
-    currentId: 9
-  - id: 9
-    currentId: 7
+  mapData: {fileID: 11400000, guid: 34b45906a8341b84897e86dd89b5928e, type: 2}
+  itemData: {fileID: 11400000, guid: f47a204437b9144448802315a8ac510a, type: 2}
   texts:
   - {fileID: 156221935}
   - {fileID: 117378845}
@@ -1945,5 +1934,4 @@ MonoBehaviour:
   - {fileID: 1693141520}
   - {fileID: 1583427440}
   - {fileID: 1891675920}
-  randomSpawn: 0
   roundText: {fileID: 1408022682}
