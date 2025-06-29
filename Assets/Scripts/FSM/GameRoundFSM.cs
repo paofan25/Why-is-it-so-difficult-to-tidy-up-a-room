@@ -69,7 +69,7 @@ public class WaitState : IState
                 }
             }
         }
-        if(blackboard.currentItem != null && Vector3.Distance(blackboard.currentItem.transform.position, blackboard.player.transform.position) < 0.5f)
+        if(blackboard.currentItem != null && Vector3.Distance(blackboard.currentItem.transform.position, blackboard.player.transform.position) < 0.8f)
         {
             MusicMgr.Instance.PlaySound("Sounds/SFX_In_OBJ_A");
             blackboard.currentItem.gameObject.SetActive(false);
