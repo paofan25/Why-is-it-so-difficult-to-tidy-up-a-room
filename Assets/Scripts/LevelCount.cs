@@ -9,12 +9,12 @@ public class LevelCount : MonoBehaviour
     [SerializeField]private TextMeshProUGUI textContent;
 
     [SerializeField] private int maxCount=10;
-    public int currentCount;
+    public int currentCount=0;
 
     private int previousCount;
 
     public Animator countAnimator;
-    private Test test;
+    private GameRoundFSM test;
 
     public GameObject failPanel;
 
@@ -22,18 +22,18 @@ public class LevelCount : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        test = FindObjectOfType<Test>();
-        currentCount = test.currentRound;
-        
-        maxCount = FindObjectOfType<Test>().maxcount;
+        test = FindObjectOfType<GameRoundFSM>();
+        currentCount = test.blackBoard.totalRoundCount;
+        // currentCount = test.currentRound;
+        //
     }
 
     // Update is called once per frame
     void Update()
     {
 
-
-        currentCount = test.currentRound;
+        currentCount = test.blackBoard.totalRoundCount;
+        // currentCount = test.currentRound;
 
         
         textContent.text = $"{maxCount-currentCount}步";

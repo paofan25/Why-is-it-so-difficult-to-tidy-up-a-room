@@ -41,6 +41,8 @@ public class WaitState : IState
     }
     public void OnEnter()
     {
+        blackboard.totalRoundCount++;
+        Debug.Log($"当前总轮次: {blackboard.totalRoundCount}");
         //�ȴ��غϼ���
         for (int i = 0; i < blackboard.items.Count; i++)
         {
@@ -115,14 +117,28 @@ public class PlayerRoundState : IState
         }
         if (isOver)
         {
-            //ʤ��
-            AllSceneMgr.Instance.GoNext();
+            Debug.Log("胜利");
+
+            // 播放音效
             MusicMgr.Instance.PlaySound("Sounds/SFX_In_Win");
-            Debug.Log("ʤ��");
+
+            // 打开胜利UI
+            blackboard.winPanel.SetActive(true);
+
+            // 标记胜利
             blackboard.goNext = true;
+
+            // 启动延迟协程（要在 MonoBehaviour 上执行）
+            GameRoundFSM owner = GameObject.FindObjectOfType<GameRoundFSM>();
+            owner.StartCoroutine(DelayGoNext());
         }
     }
 
+    private IEnumerator DelayGoNext(){
+        yield return new WaitForSeconds(2f);
+
+        AllSceneMgr.Instance.GoNext();
+    }
     public void OnUpdate()
     {
         if (blackboard.goToMapData == null && Input.GetMouseButtonDown(0))
@@ -222,4 +238,8 @@ public class GameRoundBlackboard : BlackBoard
     public MapDataMono goToMapData;
     public List<ItemMono> items;
     public bool goNext;
+
+    public int totalRoundCount = -1; // 👈 全局轮次数
+
+    public GameObject winPanel;
 }

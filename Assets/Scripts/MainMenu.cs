@@ -31,7 +31,7 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         // AudioManager.Instance.PlayRandomSFX(SFXClip.Jump);
-        AudioManager.Instance.PlaySoundByKey("BGM-1");
+        // AudioManager.Instance.PlaySoundByKey("BGM-1");
         // startButton.GetComponent<Button>().onClick.AddListener(StartGame);
         // exitButton.GetComponent<Button>().onClick.AddListener(QuitGame);
         // setButton.GetComponent<Button>().onClick.AddListener(SetPanel);

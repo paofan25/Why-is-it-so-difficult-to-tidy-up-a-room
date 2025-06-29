@@ -397,6 +397,8 @@ MonoBehaviour:
     - {fileID: 1937613777}
     - {fileID: 2030617982}
     goNext: 0
+    totalRoundCount: -1
+    winPanel: {fileID: 1090465846}
 --- !u!4 &456543756
 Transform:
   m_ObjectHideFlags: 0
@@ -819,70 +821,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 336055485675691676, guid: acd3421299595434ab1eb847b5a99412,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 336055485728633460, guid: acd3421299595434ab1eb847b5a99412,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 336055485800362449, guid: acd3421299595434ab1eb847b5a99412,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 336055486214556935, guid: acd3421299595434ab1eb847b5a99412,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 336055486491153610, guid: acd3421299595434ab1eb847b5a99412,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 336055486959410971, guid: acd3421299595434ab1eb847b5a99412,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 336055487131654766, guid: acd3421299595434ab1eb847b5a99412,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 336055487167962150, guid: acd3421299595434ab1eb847b5a99412,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 336055487326407284, guid: acd3421299595434ab1eb847b5a99412,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 336055487550701701, guid: acd3421299595434ab1eb847b5a99412,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 820840336472213794, guid: acd3421299595434ab1eb847b5a99412,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3196908638856531235, guid: acd3421299595434ab1eb847b5a99412,
         type: 3}
       propertyPath: m_Name
       value: "\u6E38\u620F\u83DC\u53552"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3196908638856531235, guid: acd3421299595434ab1eb847b5a99412,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3196908638856531247, guid: acd3421299595434ab1eb847b5a99412,
         type: 3}
@@ -989,13 +931,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3196908639612124199, guid: acd3421299595434ab1eb847b5a99412,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acd3421299595434ab1eb847b5a99412, type: 3}
+--- !u!1 &1090465846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1187645941, guid: acd3421299595434ab1eb847b5a99412,
+    type: 3}
+  m_PrefabInstance: {fileID: 1090465845}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1121314905
 GameObject:
   m_ObjectHideFlags: 0
