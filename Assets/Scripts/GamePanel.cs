@@ -27,6 +27,6 @@ public class GamePanel : MonoBehaviour
     }
 
     public void ExitGame(){
-        mainMenu.SetActive(true);
+        SceneManager.LoadSceneAsync("BeginScene");
     }
 }
