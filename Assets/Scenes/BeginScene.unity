@@ -275,8 +275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3996cdcfdde42ec449ab41587b696e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button1: {fileID: 156431870}
-  button2: {fileID: 1503786057}
+  button1: {fileID: 1503786057}
+  button2: {fileID: 156431870}
 --- !u!114 &274483236
 MonoBehaviour:
   m_ObjectHideFlags: 0
