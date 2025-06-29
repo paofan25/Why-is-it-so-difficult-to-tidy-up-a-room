@@ -1590,6 +1590,11 @@ PrefabInstance:
       propertyPath: FirstLevel
       value: SampleScene
       objectReference: {fileID: 0}
+    - target: {fileID: 5674243326393803657, guid: a4f5ec9a9ce2afa439e516704c33709b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5842960361082648099, guid: a4f5ec9a9ce2afa439e516704c33709b,
         type: 3}
       propertyPath: m_Name
@@ -1598,7 +1603,7 @@ PrefabInstance:
     - target: {fileID: 5842960361082648099, guid: a4f5ec9a9ce2afa439e516704c33709b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8706976125984111894, guid: a4f5ec9a9ce2afa439e516704c33709b,
         type: 3}
@@ -1762,6 +1767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Restart: {fileID: 62254170}
   Exit: {fileID: 1908762095}
+  mainMenu: {fileID: 0}
 --- !u!114 &1263519639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3383,6 +3389,9 @@ MonoBehaviour:
   textContent: {fileID: 2826438228213415394}
   maxCount: 0
   currentCount: 0
+  countAnimator: {fileID: 0}
+  failPanel: {fileID: 0}
+  isPlayingAnim: 0
 --- !u!114 &2826438228213415394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3491,6 +3500,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "\u6E38\u620F\u83DC\u53551"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2951084635796953751, guid: 193e1a167682e4e488addcdd1a776c82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2951084635796953755, guid: 193e1a167682e4e488addcdd1a776c82,
         type: 3}
