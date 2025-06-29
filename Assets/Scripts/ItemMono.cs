@@ -5,11 +5,11 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class ItemMono : MonoBehaviour
 {
     public ItemDataPoint itemData;
-    public Vector3 targetPos;
-    public bool isDone = true;
+    public Vector3 targetPos;    public bool isDone = true;
     private bool needCheck;
     private void Update()
     {
