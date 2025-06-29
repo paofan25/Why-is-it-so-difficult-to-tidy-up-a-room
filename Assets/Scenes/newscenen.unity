@@ -184,10 +184,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7450554166802996829, guid: d0cd30dc6eb6a474994f9499c3d2a46a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7732023369769940320, guid: d0cd30dc6eb6a474994f9499c3d2a46a,
         type: 3}
       propertyPath: m_Name
       value: EIA_Scene_v3 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7732023369769940320, guid: d0cd30dc6eb6a474994f9499c3d2a46a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0cd30dc6eb6a474994f9499c3d2a46a, type: 3}
