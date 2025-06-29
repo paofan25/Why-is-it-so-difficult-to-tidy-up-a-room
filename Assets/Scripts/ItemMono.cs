@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,7 +8,8 @@ using UnityEngine.AI;
 public class ItemMono : MonoBehaviour
 {
     public ItemDataPoint itemData;
-    public Vector3 targetPos;    public bool isDone = true;
+    public Vector3 targetPos;   
+    public bool isDone = true;
     private bool needCheck;
     private void Update()
     {

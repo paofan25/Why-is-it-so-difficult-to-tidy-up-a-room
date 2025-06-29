@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -42,7 +41,7 @@ public class WaitState : IState
     }
     public void OnEnter()
     {
-        //µÈ´ý»ØºÏ¼õÉÙ
+        //ï¿½È´ï¿½ï¿½ØºÏ¼ï¿½ï¿½ï¿½
         for (int i = 0; i < blackboard.items.Count; i++)
         {
             blackboard.items[i].itemData.SetWaitRound(blackboard.items[i].itemData.GetWaitRound() - 1);
@@ -102,7 +101,7 @@ public class PlayerRoundState : IState
         blackboard.currentItem.itemData.SetAlive();
         blackboard.currentItem.itemData.SetWaitRound(3);
         blackboard.currentItem.itemData.CheckIsRight();
-        //ÇåÀí
+        //ï¿½ï¿½ï¿½ï¿½
         blackboard.currentItem = null;
         blackboard.goToMapData = null;
         bool isOver = true;
@@ -116,9 +115,9 @@ public class PlayerRoundState : IState
         }
         if (isOver)
         {
-            //Ê¤Àû
+            //Ê¤ï¿½ï¿½
             MusicMgr.Instance.PlaySound("Sounds/SFX_In_Win");
-            Debug.Log("Ê¤Àû");
+            Debug.Log("Ê¤ï¿½ï¿½");
         }
     }
 
@@ -141,7 +140,7 @@ public class PlayerRoundState : IState
         }
         if (blackboard.goToMapData != null && Vector3.Distance(blackboard.goToMapData.gotoPos.transform.position, blackboard.player.transform.position) < 0.5f)
         {
-            //ÒÆ¶¯ÎïÌå
+            //ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½
             blackboard.currentItem.transform.position = blackboard.goToMapData.putPos.transform.position;
             MusicMgr.Instance.PlaySound("Sounds/SFX_In_OBJ_B");
             blackboard.currentItem.gameObject.SetActive(true);
@@ -184,8 +183,8 @@ public class ItemRoundState : IState
         }
         if (isOver)
         {
-            //Ê¤Àû
-            Debug.Log("Ê¤Àû");
+            //Ê¤ï¿½ï¿½
+            Debug.Log("Ê¤ï¿½ï¿½");
             MusicMgr.Instance.PlaySound("Sounds/SFX_In_Win");
         }
     }
