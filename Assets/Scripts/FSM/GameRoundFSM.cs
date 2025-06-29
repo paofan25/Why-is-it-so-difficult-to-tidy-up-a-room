@@ -99,7 +99,7 @@ public class PlayerRoundState : IState
         blackboard.currentItem.itemData.spawnX = blackboard.goToMapData.mapData.x;
         blackboard.currentItem.itemData.spawnY = blackboard.goToMapData.mapData.y;
         blackboard.currentItem.itemData.SetAlive();
-        blackboard.currentItem.itemData.SetWaitRound(3);
+        blackboard.currentItem.itemData.SetWaitRound(2);
         blackboard.currentItem.itemData.CheckIsRight();
         //����
         blackboard.currentItem = null;
@@ -163,7 +163,6 @@ public class ItemRoundState : IState
         {
             if(blackboard.items[i].itemData.IsAlive && blackboard.items[i].itemData.GetWaitRound()<=0)
             {
-                Debug.Log("in");
                 blackboard.items[i].itemData.AIMove(blackboard.player.x, blackboard.player.y);
                 blackboard.items[i].Move(blackboard.player.x, blackboard.player.y);
             }
