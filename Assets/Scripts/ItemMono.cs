@@ -35,12 +35,15 @@ public class ItemMono : MonoBehaviour
     }
     public void Move(int playerX, int playerY)
     {
-        if ((Math.Abs(itemData.spawnX - playerX) == 1 && Math.Abs(itemData.spawnY - playerY) == 0) ||
-            (Math.Abs(itemData.spawnY - playerY) == 1 && Math.Abs(itemData.spawnX - playerX) == 0) ||
-            (itemData.spawnX == playerX && itemData.spawnY == playerY))
-        {
-            return;
-        }
+        //if ((Math.Abs(itemData.spawnX - playerX) == 1 && Math.Abs(itemData.spawnY - playerY) == 0) ||
+        //    (Math.Abs(itemData.spawnY - playerY) == 1 && Math.Abs(itemData.spawnX - playerX) == 0) ||
+        //    (itemData.spawnX == playerX && itemData.spawnY == playerY))
+        //{
+        //    Debug.Log("ÍË³ö");
+        //    return;
+        //}
+        itemData.CheckIsRight();
+        if (itemData.isRight) return;
         isDone = false;
         if(itemData.IsAlive && itemData.GetWaitRound() <= 0)
         {

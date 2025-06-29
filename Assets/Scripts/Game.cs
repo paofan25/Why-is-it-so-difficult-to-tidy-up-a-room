@@ -19,13 +19,13 @@ public class Game : MonoBehaviour
     }
     private void OnGUI()
     {
-        if(GUI.Button(new Rect(0, 0, 100, 50), "±≥æ∞“Ù2"))
-        {
-            MusicMgr.Instance.ChangeBKMusicValue2(1);
-        }
-        if (GUI.Button(new Rect(50, 0, 100, 50), "±≥æ∞“Ù3"))
-        {
-            MusicMgr.Instance.ChangeBKMusicValue3(1);
-        }
+        //if(GUI.Button(new Rect(0, 0, 100, 50), "±≥æ∞“Ù2"))
+        //{
+        //    MusicMgr.Instance.ChangeBKMusicValue2(1);
+        //}
+        //if (GUI.Button(new Rect(50, 0, 100, 50), "±≥æ∞“Ù3"))
+        //{
+        //    MusicMgr.Instance.ChangeBKMusicValue3(1);
+        //}
     }
 }
