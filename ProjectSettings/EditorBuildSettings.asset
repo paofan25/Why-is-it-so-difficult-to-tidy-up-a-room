@@ -6,9 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/EmptyScene 1.unity
+    guid: addc130c3c8fb33418d901fc03c6b951
+  - enabled: 1
     path: Assets/Scenes/EmptyScene 4.unity
     guid: 85bc46db6e41e3d4e9637cd6b68c3dc2
   - enabled: 1
-    path: Assets/Scenes/EmptyScene 1.unity
-    guid: addc130c3c8fb33418d901fc03c6b951
+    path: Assets/Scenes/EmptyScene 2.unity
+    guid: c62d878f137c7d840865a3bf85b31230
+  - enabled: 1
+    path: Assets/Scenes/EmptyScene 3.unity
+    guid: c86af3cdfbe7a324a9227f1a29aa2607
+  - enabled: 1
+    path: Assets/Scenes/EmptyScene 5.unity
+    guid: ccaf2d273dcc5dd4aae61f48174f1e58
   m_configObjects: {}

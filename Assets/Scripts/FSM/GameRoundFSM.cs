@@ -19,7 +19,7 @@ public class GameRoundFSM : MonoBehaviour
 
     void Update()
     {
-        fsm.OnUpdate();
+        if(fsm != null) fsm.OnUpdate();
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log(fsm.curState);
@@ -116,8 +116,10 @@ public class PlayerRoundState : IState
         if (isOver)
         {
             //ʤ��
+            AllSceneMgr.Instance.GoNext();
             MusicMgr.Instance.PlaySound("Sounds/SFX_In_Win");
             Debug.Log("ʤ��");
+            blackboard.goNext = true;
         }
     }
 
@@ -159,6 +161,7 @@ public class ItemRoundState : IState
     }
     public void OnEnter()
     {
+        if (blackboard.goNext) return;
         for (int i = 0; i < blackboard.items.Count; i++)
         {
             if(blackboard.items[i].itemData.IsAlive && blackboard.items[i].itemData.GetWaitRound()<=0)
@@ -171,25 +174,26 @@ public class ItemRoundState : IState
 
     public void OnExit()
     {
-        bool isOver = true;
-        for (int i = 0; i < blackboard.items.Count; i++)
-        {
-            if (!blackboard.items[i].itemData.isRight)
-            {
-                isOver = false;
-                break;
-            }
-        }
-        if (isOver)
-        {
-            //ʤ��
-            Debug.Log("ʤ��");
-            MusicMgr.Instance.PlaySound("Sounds/SFX_In_Win");
-        }
+        //bool isOver = true;
+        //for (int i = 0; i < blackboard.items.Count; i++)
+        //{
+        //    if (!blackboard.items[i].itemData.isRight)
+        //    {
+        //        isOver = false;
+        //        break;
+        //    }
+        //}
+        //if (isOver)
+        //{
+        //    //ʤ��
+        //    Debug.Log("ʤ��");
+        //    MusicMgr.Instance.PlaySound("Sounds/SFX_In_Win");
+        //}
     }
 
     public void OnUpdate()
     {
+        if (blackboard.goNext) return;
         bool Over = true;
         for (int i = 0; i < blackboard.items.Count; i++)
         {
@@ -217,4 +221,5 @@ public class GameRoundBlackboard : BlackBoard
     public ItemMono currentItem;
     public MapDataMono goToMapData;
     public List<ItemMono> items;
+    public bool goNext;
 }

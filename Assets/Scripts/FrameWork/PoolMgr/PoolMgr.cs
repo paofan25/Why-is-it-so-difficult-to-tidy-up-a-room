@@ -140,6 +140,7 @@ public class PoolMgr : BaseManager<PoolMgr>
         if (PoolMgr.isOpenLayout && poolObj == null )
         {
             poolObj = new GameObject("Pool");
+            GameObject.DontDestroyOnLoad(poolObj);
         }
         //不存在对应的抽屉容器 创建抽屉
         if (!poolDic.ContainsKey(name))
