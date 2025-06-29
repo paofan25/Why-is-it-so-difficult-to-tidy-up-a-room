@@ -52,6 +52,7 @@ public class WaitState : IState
 
     public void OnExit()
     {
+        blackboard.floors[(blackboard.currentItem.itemData.x - 1) * 3 + blackboard.currentItem.itemData.y - 1].enabled = true;
     }
 
     public void OnUpdate()
@@ -95,6 +96,7 @@ public class PlayerRoundState : IState
 
     public void OnExit()
     {
+        blackboard.floors[(blackboard.currentItem.itemData.x - 1) * 3 + blackboard.currentItem.itemData.y - 1].enabled = false;
         blackboard.player.x = blackboard.goToMapData.mapData.x;
         blackboard.player.y = blackboard.goToMapData.mapData.y;
         //Debug.Log($"goToMapdata {blackboard.goToMapData.mapData.x} {blackboard.goToMapData.mapData.y}");
@@ -242,4 +244,5 @@ public class GameRoundBlackboard : BlackBoard
     public int totalRoundCount = -1; // 👈 全局轮次数
 
     public GameObject winPanel;
+    public List<OutlineEffect> floors;
 }
