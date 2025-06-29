@@ -18,16 +18,25 @@ public class MainMenu : MonoBehaviour
     }
     [SerializeField] private string FirstLevel;
 
-    [SerializeField] private GameObject startButton;
-    [SerializeField] private GameObject exitButton;
-    [SerializeField] private GameObject setButton;
-    [SerializeField] private GameObject setPanel;
+    // [SerializeField] private GameObject startButton;
+    // [SerializeField] private GameObject exitButton;
+    // [SerializeField] private GameObject setButton;
+    // [SerializeField] private GameObject setPanel;
+    [SerializeField] private Button resume;
+    [SerializeField] private Button exit;
+
+    public GameObject mainMenu;
+    
     // Start is called before the first frame update
     void Start()
     {
-        startButton.GetComponent<Button>().onClick.AddListener(StartGame);
-        exitButton.GetComponent<Button>().onClick.AddListener(QuitGame);
-        setButton.GetComponent<Button>().onClick.AddListener(SetPanel);
+        // AudioManager.Instance.PlayRandomSFX(SFXClip.Jump);
+        AudioManager.Instance.PlaySoundByKey("BGM-1");
+        // startButton.GetComponent<Button>().onClick.AddListener(StartGame);
+        // exitButton.GetComponent<Button>().onClick.AddListener(QuitGame);
+        // setButton.GetComponent<Button>().onClick.AddListener(SetPanel);
+        resume.onClick.AddListener(Resume);
+        exit.onClick.AddListener(QuitGame);
     }
 
     // Update is called once per frame
@@ -36,6 +45,9 @@ public class MainMenu : MonoBehaviour
         
     }
 
+    public void Resume(){
+        mainMenu.SetActive(false);
+    }
     public void StartGame(){
         SceneManager.LoadScene(FirstLevel);
     }
@@ -46,6 +58,6 @@ public class MainMenu : MonoBehaviour
     }
 
     public void SetPanel(){
-        setPanel.SetActive(true);
+        // setPanel.SetActive(true);
     }
 }

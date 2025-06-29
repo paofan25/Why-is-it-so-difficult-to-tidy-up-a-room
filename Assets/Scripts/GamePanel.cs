@@ -8,6 +8,7 @@ public class GamePanel : MonoBehaviour
 {
     [SerializeField] private Button Restart;
     [SerializeField] private Button Exit;
+    [SerializeField] private GameObject mainMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +23,10 @@ public class GamePanel : MonoBehaviour
     }
 
     public void RestartGame(){
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void ExitGame(){
-        SceneManager.LoadScene("Begin");
+        mainMenu.SetActive(true);
     }
 }

@@ -22,6 +22,13 @@ public class MapDataPoint
 }
 public enum DataType
 {
-    Desk,
-    Bed,
+    chair,
+    book,
+    garbage,
+    map,
+    plant,
+    doll,
+    glass,
+    clock,
+    pillow,
 }

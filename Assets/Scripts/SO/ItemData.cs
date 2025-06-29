@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "newItemData", menuName = "创建游戏数据/物体数据")]
 public class ItemData : ScriptableObject
 {
+    public int maxCount;
     [Header("开局物体数据，spawnXY为出生位置，xy为目标位置")]
     public List<ItemDataPoint> itemDatas;
 }
@@ -16,6 +17,7 @@ public class ItemDataPoint
     public int spawnX;
     public int spawnY;
     public DataType type;
+    public bool isRight = false;
     private bool isAlive = false;
     public bool IsAlive => isAlive;
     private int waitRound = 0;
@@ -62,5 +64,14 @@ public class ItemDataPoint
             return;
         }
         spawnX = newx;
+
+        if (spawnX == x && spawnY == y) isRight = true;
+        else isRight = false;
+        Debug.Log(isRight);
+    }
+    public void CheckIsRight()
+    {
+        if (spawnX == x && spawnY == y) isRight = true;
+        else isRight = false;
     }
 }

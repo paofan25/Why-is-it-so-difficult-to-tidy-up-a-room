@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c2df63b530d664b96194a2423307a8, type: 3}
+  m_Name: SoundConfig
+  m_EditorClassIdentifier: 
+  soundEntries:
+  - key: BGM-1
+    loop: 1
+    clips:
+    - {fileID: 8300000, guid: ba3b1d79fb41d5a4782f5ca435820482, type: 3}
+    - {fileID: 8300000, guid: 19ce89b552ba81f48b666c92a902c485, type: 3}
+    - {fileID: 8300000, guid: c63bfec65dec32247a5eb3012c78f51b, type: 3}

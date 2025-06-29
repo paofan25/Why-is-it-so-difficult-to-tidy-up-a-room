@@ -5,20 +5,23 @@ using System.Data;
 using System.Diagnostics.SymbolStore;
 using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class Test : MonoBehaviour
 {
     public MapData mapData;
     public ItemData itemData;
-    private int currentRound;
+    public int currentRound;
     public List<Text> texts;
     public Text roundText;
     private int playerX;
     private int playerY;
     private bool isDone = false;
-    private void Awake()
-    {
+
+    [FormerlySerializedAs("maxCount")] public int maxcount;
+    private void Awake(){
+        maxcount = itemData.maxCount;
         //‰÷»æ≥ı ºªØ
         for (int i = 0; i < texts.Count; i++)
         {
