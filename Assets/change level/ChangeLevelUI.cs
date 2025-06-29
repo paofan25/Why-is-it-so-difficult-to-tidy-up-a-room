@@ -9,9 +9,11 @@ using UnityEditor;
 public class SceneButtonPair
 {
 #if UNITY_EDITOR
+    
+
     public SceneAsset sceneAsset;   // 可拖入 Scene 资源
 #endif
-    [HideInInspector] public string sceneName;  // 实际加载用的名称
+    public string sceneName;  // 实际加载用的名称
     public Button button;           // 关联按钮
 }
 
@@ -24,7 +26,17 @@ public class ChangeLevelUI : MonoBehaviour
 
     [Header("场景按钮设置")]
     public SceneButtonPair[] sceneButtons; // 每个按钮 + 对应场景
-
+#if UNITY_EDITOR
+    void OnValidate(){
+        foreach (var pair in sceneButtons) {
+            if (pair.sceneAsset != null) {
+                string path = AssetDatabase.GetAssetPath(pair.sceneAsset);
+                string name = System.IO.Path.GetFileNameWithoutExtension(path);
+                pair.sceneName = name;
+            }
+        }
+    }
+#endif
     void Start()
     {
         changePanel.SetActive(false);
