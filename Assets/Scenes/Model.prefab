@@ -2324,6 +2324,7 @@ GameObject:
   - component: {fileID: 2855687812753573776}
   - component: {fileID: 6620901693388478409}
   - component: {fileID: 6620901693388478408}
+  - component: {fileID: 2458482992058145856}
   m_Layer: 0
   m_Name: Cupboard
   m_TagString: Untagged
@@ -2412,6 +2413,24 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5836728072050040443, guid: d7254130ef479f14fa860a7cbefb38f5, type: 3}
+--- !u!114 &2458482992058145856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2445740572447193396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63fb3b19f2e0c5342ba00a881a3fb70e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapData:
+    x: 3
+    y: 2
+    type: 7
+  putPos: {fileID: 7732313255643002688}
+  gotoPos: {fileID: 7732313255156878425}
 --- !u!1 &2583251615370096583
 GameObject:
   m_ObjectHideFlags: 0
