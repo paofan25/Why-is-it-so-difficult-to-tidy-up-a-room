@@ -63,6 +63,7 @@ public class WaitState : IState
             {
                 if (hit.collider.gameObject.GetComponent<ItemMono>())
                 {
+                    MusicMgr.Instance.PlaySound("Sounds/SFX_In_Click_A");
                     blackboard.currentItem = hit.collider.gameObject.GetComponent<ItemMono>();
                     blackboard.player.GetComponent<NavMeshAgent>().SetDestination(hit.collider.gameObject.transform.position);
                     //fsm.SwitchState(StateType.PlayerRound);
@@ -71,6 +72,7 @@ public class WaitState : IState
         }
         if(blackboard.currentItem != null && Vector3.Distance(blackboard.currentItem.transform.position, blackboard.player.transform.position) < 0.5f)
         {
+            MusicMgr.Instance.PlaySound("Sounds/SFX_In_OBJ_A");
             blackboard.currentItem.gameObject.SetActive(false);
             fsm.SwitchState(StateType.PlayerRound);
         }
@@ -115,6 +117,7 @@ public class PlayerRoundState : IState
         if (isOver)
         {
             //胜利
+            MusicMgr.Instance.PlaySound("Sounds/SFX_In_Win");
             Debug.Log("胜利");
         }
     }
@@ -129,6 +132,7 @@ public class PlayerRoundState : IState
             {
                 if (hit.collider.gameObject.GetComponent<MapDataMono>() && hit.collider.gameObject.GetComponent<MapDataMono>().mapData.type == blackboard.currentItem.itemData.type)
                 {
+                    MusicMgr.Instance.PlaySound("Sounds/SFX_In_Click_B");
                     blackboard.goToMapData = hit.collider.gameObject.GetComponent<MapDataMono>();
                     blackboard.player.GetComponent<NavMeshAgent>().SetDestination(blackboard.goToMapData.gotoPos.transform.position);
                     //fsm.SwitchState(StateType.PlayerRound);
@@ -139,6 +143,7 @@ public class PlayerRoundState : IState
         {
             //移动物体
             blackboard.currentItem.transform.position = blackboard.goToMapData.putPos.transform.position;
+            MusicMgr.Instance.PlaySound("Sounds/SFX_In_OBJ_B");
             blackboard.currentItem.gameObject.SetActive(true);
             fsm.SwitchState(StateType.ItemRound);
         }
@@ -181,6 +186,7 @@ public class ItemRoundState : IState
         {
             //胜利
             Debug.Log("胜利");
+            MusicMgr.Instance.PlaySound("Sounds/SFX_In_Win");
         }
     }
 
