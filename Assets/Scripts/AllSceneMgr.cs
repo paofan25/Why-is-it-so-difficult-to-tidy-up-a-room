@@ -18,7 +18,7 @@ public class AllSceneMgr : BaseManager<AllSceneMgr>
         curScene++;
         if(curScene > maxScene)
         {
-            Application.Quit();
+            SceneManager.LoadScene("BeginScene");
         }
         MonoMgr.Instance.StartCoroutine(GoNextIE(false));
     }
